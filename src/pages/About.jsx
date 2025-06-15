@@ -23,16 +23,14 @@ export const About = () => {
       <section className="bg-white shadow rounded-lg p-6 mb-8">
         <h2 className="text-2xl font-semibold text-blue-600 mb-4">Vision</h2>
         <p className="text-gray-700">
-          NYA envisions a just and harmonious society where men and women from deprived communities live
-          with dignity in a sustainable environment.
+        Nava Youth Association envisages itself as an organisation that is capable of training, research and implementing development activities at the national level, and is working towards a gender equitable, just and harmonious society where, men and women belonging to the deprived and weaker sections of society can live in a sustainable manner with dignity and honor.
         </p>
       </section>
 
       <section className="bg-white shadow rounded-lg p-6 mb-8">
         <h2 className="text-2xl font-semibold text-blue-600 mb-4">Mission</h2>
         <p className="text-gray-700">
-          To empower vulnerable communities by building their capacities and ensuring improved quality
-          of life through collective action, sustainable practices, and optimal use of natural resources.
+         To build up the capacities of the women and men of vulnerable sections of society and to thereby protect, enhance and improve the quality of their life, in a sustainable environment through cooperative action and through organized collective bargaining power; leading to increased control and management of financial resources and through the optimum use of natural resources
         </p>
       </section>
 

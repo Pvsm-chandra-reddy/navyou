@@ -1,26 +1,37 @@
 import React from "react";
 
 export const Contact = () => {
+  const sendWhatsAppMessage = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const message = e.target.message.value;
+
+    const fullMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+    const phoneNumber = "7032615783"; // Replace with your WhatsApp number
+    window.open(`https://wa.me/${phoneNumber}?text=${fullMessage}`, "_blank");
+  };
+
   return (
     <div className="max-w-7xl mx-auto p-6 md:p-12">
       <h2 className="text-3xl font-bold text-blue-700 mb-6 text-center">Contact Us</h2>
       <div className="grid md:grid-cols-2 gap-10">
         {/* Contact Form */}
-        <form className="bg-white shadow-lg p-6 rounded-lg space-y-4">
+        <form onSubmit={sendWhatsAppMessage} className="bg-white shadow-lg p-6 rounded-lg space-y-4">
           <div>
             <label className="block text-sm font-medium">Name</label>
-            <input type="text" placeholder="Your Name" className="w-full border px-4 py-2 rounded" />
+            <input name="name" type="text" placeholder="Your Name" className="w-full border px-4 py-2 rounded" required />
           </div>
           <div>
             <label className="block text-sm font-medium">Email</label>
-            <input type="email" placeholder="you@example.com" className="w-full border px-4 py-2 rounded" />
+            <input name="email" type="email" placeholder="you@example.com" className="w-full border px-4 py-2 rounded" required />
           </div>
           <div>
             <label className="block text-sm font-medium">Message</label>
-            <textarea rows="5" placeholder="Your message..." className="w-full border px-4 py-2 rounded"></textarea>
+            <textarea name="message" rows="5" placeholder="Your message..." className="w-full border px-4 py-2 rounded" required></textarea>
           </div>
-          <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
-            Send Message
+          <button type="submit" className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition">
+            Send via WhatsApp
           </button>
         </form>
 
